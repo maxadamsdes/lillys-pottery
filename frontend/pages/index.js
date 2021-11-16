@@ -6,7 +6,8 @@ const HomePage = ({ products }) => {
   return (
     <div>
       <Head>
-        <title>Strapi Next.js E-commerce</title>
+        <title>Lilly's Pottery</title>
+        <meta name="description" content="All about pottery, made in Richmond, Nelson, New Zealand. Something for everyone!" />
       </Head>
       <ProductsList products={products} />
     </div>

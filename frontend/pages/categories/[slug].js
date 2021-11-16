@@ -14,6 +14,8 @@ const CategoryPage = ({ category }) => {
       <Head>
         <title>{category.name} products</title>
       </Head>
+      <br />
+      <h1 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate text-center">{category.name}</h1>
       <ProductsList products={category.products} />
     </div>
   )

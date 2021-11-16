@@ -3,6 +3,7 @@ import Head from "next/head"
 import Layout from "../components/Layout"
 import { getCategories } from "../utils/api"
 import "../styles/index.css"
+import CategoryButtons from "../components/CategoryButtons"
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -18,8 +19,13 @@ const MyApp = ({ Component, pageProps }) => {
           async
           src="https://cdn.snipcart.com/themes/v3.0.16/default/snipcart.js"
         />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+       
       </Head>
       <Component {...pageProps} />
+      <CategoryButtons categories={pageProps.categories} />
+      
     </Layout>
   )
 }
